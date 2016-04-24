@@ -19,8 +19,8 @@ namespace ContactManager
             builder.SetBasePath(app.ApplicationBasePath);
             builder.AddJsonFile("appsettings.json");
             var configuration = builder.Build();
-            AppSettings.Title =  configuration.Get("AppSettings:Title");
-            AppSettings.ConnectionString = configuration.Get("Data:DefaultConnection:ConnectionString");
+            AppSettings.Title =  configuration.Get<string>("AppSettings:Title");
+            AppSettings.ConnectionString = configuration.Get<string>("Data:DefaultConnection:ConnectionString");
 
         }
 

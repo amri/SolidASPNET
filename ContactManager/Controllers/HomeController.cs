@@ -28,7 +28,7 @@ namespace ContactManager.Controllers
 
         public IActionResult AddContact()
         {
-            return View();
+            return View($"AddContact");
         }
 
         [HttpPost]
